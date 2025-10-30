@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+# Unity
+>>>>>>> 6fb3bfe (Initial Unity project (correct repo root: outer ZomBrawl))
 [Ll]ibrary/
 [Tt]emp/
 [Oo]bj/
@@ -11,8 +15,17 @@ UserSettings/
 *.pdb
 *.mdb
 *.opendb
+<<<<<<< HEAD
 .vs/
 .vscode/
 .idea/
+=======
+
+# IDE/OS
+.vs/
+.vscode/
+.idea/
+*.DotSettings.user
+>>>>>>> 6fb3bfe (Initial Unity project (correct repo root: outer ZomBrawl))
 .DS_Store
 Thumbs.db
