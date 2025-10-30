@@ -20,3 +20,7 @@ UserSettings/
 *.DotSettings.user
 .DS_Store
 Thumbs.db
+
+# Misc
+mono_crash*.json
+ignore.conf
