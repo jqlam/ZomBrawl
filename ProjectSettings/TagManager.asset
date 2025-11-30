@@ -4,8 +4,8 @@
 TagManager:
   serializedVersion: 3
   tags:
-  - Enemy
-  - Bullet
+  - Zombie
+  - Wall
   layers:
   - Default
   - TransparentFX
@@ -13,7 +13,7 @@ TagManager:
   - 
   - Water
   - UI
-  - Ground
+  - 
   - 
   - 
   - 
@@ -43,8 +43,23 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Characters
-    uniqueID: 3243107257
+  - name: Background
+    uniqueID: 2263373879
+    locked: 0
+  - name: Ground
+    uniqueID: 2412592781
+    locked: 0
+  - name: Player
+    uniqueID: 3750432129
+    locked: 0
+  - name: Zombie
+    uniqueID: 3468762375
+    locked: 0
+  - name: UI
+    uniqueID: 3873376927
+    locked: 0
+  - name: Bullet
+    uniqueID: 41044497
     locked: 0
   m_RenderingLayers:
   - Default
