@@ -14,6 +14,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private SpriteRenderer characterSpriteRenderer; // The main character sprite renderer
     [SerializeField] private List<WeaponData> ownedWeapons = new List<WeaponData>();
     [SerializeField] private int currentWeaponIndex = 0;
+
+    [Header("Sounds")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip pistolSound;
+    [SerializeField] private AudioClip rifleSound;
+    [SerializeField] private AudioClip shotgunSound;
+    [SerializeField] private AudioClip smgSound;
     
     private Rigidbody2D rb;
     private Vector2 moveInput;
@@ -109,6 +116,9 @@ public class PlayerController : MonoBehaviour
                 bulletScript.SetDamage(currentWeapon.damage);
                 bulletScript.SetSpeed(currentWeapon.bulletSpeed);
             }
+
+            // Play gunshot sound
+            audioSource.Play();
         }
     }
     
@@ -123,6 +133,24 @@ public class PlayerController : MonoBehaviour
         if (characterSpriteRenderer != null && currentWeapon.weaponSprite != null)
         {
             characterSpriteRenderer.sprite = currentWeapon.weaponSprite;
+        }
+
+        // Update sound
+        if (currentWeapon.weaponName == "Pistol")
+        {
+            audioSource.clip = pistolSound;
+        }
+        if (currentWeapon.weaponName == "Rifle")
+        {
+            audioSource.clip = rifleSound;
+        }
+        if (currentWeapon.weaponName == "Shotgun")
+        {
+            audioSource.clip = shotgunSound;
+        }
+        if (currentWeapon.weaponName == "SMG")
+        {
+            audioSource.clip = smgSound;
         }
         
         Debug.Log($"Equipped: {currentWeapon.weaponName}");
